@@ -62,14 +62,74 @@
     margin:0 auto;
   }
 
-  .hero-img{
+  .hero-art{
     width:100%;
-    height:260px;
-    object-fit:cover;
+    height:220px;
     border-radius:18px;
     margin:28px 0 8px;
-    display:block;
+    background:linear-gradient(135deg, #e8dcc4 0%, #d9c9a3 100%);
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
+
+  .hero-art .plate{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:#fdfaf3;
+    box-shadow:0 8px 20px rgba(60,50,20,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  .hero-art .yolk{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #f2b84b, #d98c1f);
+    position:absolute;
+    top:38px;
+    left:38px;
+  }
+
+  .hero-art .avocado{
+    width:70px;
+    height:90px;
+    border-radius:50% 50% 45% 45%;
+    background:linear-gradient(160deg, #8ba861 0%, #5c7a3d 100%);
+    position:absolute;
+    bottom:22px;
+    right:26px;
+    transform:rotate(-12deg);
+  }
+
+  .hero-art .avocado::after{
+    content:"";
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#7a5230;
+    position:absolute;
+    top:30px;
+    left:22px;
+  }
+
+  .hero-art .leaf{
+    position:absolute;
+    width:34px;
+    height:14px;
+    background:var(--moss);
+    border-radius:0 100% 0 100%;
+    opacity:0.55;
+  }
+  .hero-art .leaf.l1{top:24px; left:24px; transform:rotate(20deg);}
+  .hero-art .leaf.l2{bottom:30px; left:40px; transform:rotate(-30deg);}
+  .hero-art .leaf.l3{top:30px; right:30px; transform:rotate(100deg);}
 
   .hero-caption{
     text-align:center;
@@ -190,7 +250,15 @@
     <p class="sub">Confused about what to eat, giving up after two weeks — until I found a proper, step-by-step plan.</p>
   </header>
 
-  <img class="hero-img" src="https://source.unsplash.com/1200x800/?keto,avocado,healthyfood" alt="Keto-friendly meal with avocado, eggs, and greens">
+  <div class="hero-art">
+    <div class="leaf l1"></div>
+    <div class="leaf l2"></div>
+    <div class="leaf l3"></div>
+    <div class="plate">
+      <div class="yolk"></div>
+      <div class="avocado"></div>
+    </div>
+  </div>
   <p class="hero-caption">Real food, no guesswork — that's what changed things for me.</p>
 
   <div class="story">
@@ -223,4 +291,4 @@
 </div>
 
 </body>
-  </html>
+</html>
