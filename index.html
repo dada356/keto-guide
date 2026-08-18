@@ -1,294 +1,1155 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Keto Journey — The Plan That Actually Worked</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  :root{
-    --cream:#f6f1e6;
-    --moss:#3f5c3f;
-    --moss-dark:#2a3f2a;
-    --clay:#b5562f;
-    --egg:#e8dcc4;
-    --ink:#232019;
-  }
+  <title>Free Keto Recipes for Beginners</title>
 
-  *{box-sizing:border-box; margin:0; padding:0;}
+  <meta name="description"
+        content="Discover simple keto-friendly recipes and meal ideas to make planning your low-carb meals easier.">
 
-  body{
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Karla', sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
+  <style>
+    :root {
+      --green: #176b45;
+      --dark: #10261c;
+      --text: #34433b;
+      --muted: #6d7a72;
+      --light: #f4faf6;
+      --white: #ffffff;
+      --border: #e4ece7;
+      --gold: #e9b949;
+    }
 
-  .wrap{
-    max-width:640px;
-    margin:0 auto;
-    padding:0 24px;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  header{
-    padding:44px 0 20px;
-    text-align:center;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .eyebrow{
-    font-size:13px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--clay);
-    font-weight:700;
-    margin-bottom:14px;
-  }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-  h1{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:clamp(28px, 6vw, 40px);
-    line-height:1.15;
-    color:var(--moss-dark);
-    margin-bottom:16px;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .sub{
-    font-size:17px;
-    color:#4a453c;
-    max-width:480px;
-    margin:0 auto;
-  }
+    .container {
+      width: 92%;
+      max-width: 1080px;
+      margin: auto;
+    }
 
-  .hero-art{
-    width:100%;
-    height:220px;
-    border-radius:18px;
-    margin:28px 0 8px;
-    background:linear-gradient(135deg, #e8dcc4 0%, #d9c9a3 100%);
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+    /* HEADER */
 
-  .hero-art .plate{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    background:#fdfaf3;
-    box-shadow:0 8px 20px rgba(60,50,20,0.15);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-  }
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
 
-  .hero-art .yolk{
-    width:54px;
-    height:54px;
-    border-radius:50%;
-    background:radial-gradient(circle at 35% 35%, #f2b84b, #d98c1f);
-    position:absolute;
-    top:38px;
-    left:38px;
-  }
+    .nav {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  .hero-art .avocado{
-    width:70px;
-    height:90px;
-    border-radius:50% 50% 45% 45%;
-    background:linear-gradient(160deg, #8ba861 0%, #5c7a3d 100%);
-    position:absolute;
-    bottom:22px;
-    right:26px;
-    transform:rotate(-12deg);
-  }
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -.4px;
+    }
 
-  .hero-art .avocado::after{
-    content:"";
-    width:26px;
-    height:26px;
-    border-radius:50%;
-    background:#7a5230;
-    position:absolute;
-    top:30px;
-    left:22px;
-  }
+    .nav-link {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 600;
+    }
 
-  .hero-art .leaf{
-    position:absolute;
-    width:34px;
-    height:14px;
-    background:var(--moss);
-    border-radius:0 100% 0 100%;
-    opacity:0.55;
-  }
-  .hero-art .leaf.l1{top:24px; left:24px; transform:rotate(20deg);}
-  .hero-art .leaf.l2{bottom:30px; left:40px; transform:rotate(-30deg);}
-  .hero-art .leaf.l3{top:30px; right:30px; transform:rotate(100deg);}
+    /* HERO */
 
-  .hero-caption{
-    text-align:center;
-    font-size:12px;
-    color:#9a9484;
-    margin-bottom:12px;
-  }
+    .hero {
+      background:
+        radial-gradient(circle at 85% 15%, #dff3e6 0, transparent 30%),
+        linear-gradient(135deg, #f2faf5 0%, #ffffff 65%);
+      padding: 78px 0 70px;
+      overflow: hidden;
+    }
 
-  .story{
-    background:#fff;
-    border-radius:18px;
-    padding:28px 24px;
-    margin:32px 0;
-    border:1px solid #e3dac4;
-  }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 55px;
+      align-items: center;
+    }
 
-  .story p{
-    margin-bottom:14px;
-    font-size:16px;
-  }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #e4f4e9;
+      color: var(--green);
+      border-radius: 30px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin-bottom: 19px;
+    }
 
-  .story p:last-child{margin-bottom:0;}
+    h1 {
+      color: var(--dark);
+      font-size: clamp(42px, 6vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -2.5px;
+      margin-bottom: 21px;
+    }
 
-  .story .signature{
-    font-family:'Fraunces', serif;
-    font-style:italic;
-    color:var(--moss);
-    margin-top:18px;
-  }
+    .highlight {
+      color: var(--green);
+    }
 
-  .list-block{
-    margin:36px 0;
-  }
+    .hero-text {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 610px;
+      margin-bottom: 27px;
+    }
 
-  .list-block h2{
-    font-family:'Fraunces', serif;
-    font-size:22px;
-    color:var(--moss-dark);
-    margin-bottom:16px;
-    text-align:center;
-  }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background: var(--green);
+      color: white;
+      padding: 16px 25px;
+      border-radius: 11px;
+      font-size: 16px;
+      font-weight: 800;
+      box-shadow: 0 12px 25px rgba(23,107,69,.19);
+      transition: .2s ease;
+    }
 
-  .checklist{
-    list-style:none;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(23,107,69,.25);
+    }
 
-  .checklist li{
-    background:var(--egg);
-    border-radius:12px;
-    padding:14px 16px;
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    font-size:15px;
-  }
+    .small-note {
+      font-size: 12px;
+      color: #7b867f;
+      margin-top: 12px;
+    }
 
-  .checklist li::before{
-    content:"✓";
-    color:var(--moss);
-    font-weight:700;
-    flex-shrink:0;
-  }
+    /* RECIPE CARD */
 
-  .cta-block{
-    text-align:center;
-    margin:40px 0 32px;
-    padding:32px 20px;
-    background:var(--moss-dark);
-    border-radius:20px;
-  }
+    .recipe-preview {
+      position: relative;
+    }
 
-  .cta-block h3{
-    font-family:'Fraunces', serif;
-    color:#fff;
-    font-size:22px;
-    margin-bottom:10px;
-  }
+    .recipe-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 13px;
+      box-shadow: 0 25px 60px rgba(20,50,35,.13);
+      transform: rotate(1deg);
+    }
 
-  .cta-block p{
-    color:#d8e0d3;
-    font-size:14px;
-    margin-bottom:22px;
-  }
+    .recipe-image {
+      height: 350px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(20,70,42,.1), rgba(20,70,42,.02)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .cta-btn{
-    display:inline-block;
-    background:var(--clay);
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    font-size:16px;
-    padding:16px 36px;
-    border-radius:999px;
-  }
+    .recipe-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(255,255,255,.94);
+      border-radius: 14px;
+      padding: 17px;
+    }
 
-  .fine{
-    font-size:11.5px;
-    color:#8a8474;
-    text-align:center;
-    margin-top:34px;
-    padding-bottom:40px;
-    line-height:1.7;
-  }
+    .recipe-label small {
+      color: var(--green);
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: .7px;
+    }
 
-  .fine a{color:#8a8474;}
-</style>
+    .recipe-label h3 {
+      color: var(--dark);
+      margin-top: 3px;
+      font-size: 21px;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: -25px;
+      top: 35px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 13px 16px;
+      box-shadow: 0 12px 30px rgba(20,50,35,.12);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .floating-card span {
+      color: var(--green);
+      margin-right: 5px;
+    }
+
+    /* TRUST BAR */
+
+    .trust {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 20px 10px;
+      font-size: 13px;
+      color: #66736b;
+      font-weight: 600;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--dark);
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark);
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 13px;
+      letter-spacing: -.8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* PROBLEM */
+
+    .problem {
+      background: var(--light);
+    }
+
+    .problem-content {
+      max-width: 790px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .problem-content p {
+      font-size: 20px;
+      color: #4e5c54;
+    }
+
+    /* FEATURES */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 19px;
+    }
+
+    .feature {
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 27px 23px;
+      background: white;
+      transition: .2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(20,50,35,.07);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #e7f5eb;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .feature h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WHAT YOU GET */
+
+    .split {
+      background: #f8fbf9;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .mockup {
+      background: linear-gradient(145deg, #153c29, #2d7951);
+      border-radius: 23px;
+      padding: 35px;
+      color: white;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 45px rgba(20,70,45,.18);
+    }
+
+    .mockup-top {
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: .8;
+      font-weight: 700;
+    }
+
+    .mockup h2 {
+      font-size: 38px;
+      line-height: 1.08;
+    }
+
+    .mockup-bottom {
+      font-size: 14px;
+      opacity: .85;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+
+    .check-mark {
+      flex-shrink: 0;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: #dff2e5;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    /* AUDIENCE */
+
+    .audience-box {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .audience-item {
+      padding: 19px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 11px;
+      background: white;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    /* FINAL CTA */
+
+    .final {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.09), transparent 25%),
+        #123a27;
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .final h2 {
+      font-size: 42px;
+      line-height: 1.12;
+      margin-bottom: 15px;
+      letter-spacing: -.8px;
+    }
+
+    .final p {
+      max-width: 650px;
+      margin: 0 auto 27px;
+      color: #d4e3da;
+    }
+
+    .final .cta {
+      background: white;
+      color: #123a27;
+      box-shadow: none;
+    }
+
+    /* DISCLOSURE */
+
+    .disclosure {
+      padding: 22px 0;
+      font-size: 11px;
+      line-height: 1.6;
+      color: #7a857e;
+      text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: #7a857e;
+      font-size: 12px;
+      background: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .hero {
+        padding: 52px 0 45px;
+      }
+
+      .hero-grid,
+      .split-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .recipe-card {
+        transform: none;
+      }
+
+      .floating-card {
+        left: 8px;
+        top: 15px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-box {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 31px;
+      }
+
+      .mockup {
+        min-height: 330px;
+      }
+
+      .mockup h2 {
+        font-size: 32px;
+      }
+
+      .final h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .nav {
+        height: 60px;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .recipe-image {
+        height: 290px;
+      }
+
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cta {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="wrap">
+  <!-- HEADER -->
 
   <header>
-    <div class="eyebrow">One Reader's Experience</div>
-    <h1>I Had the Same Struggle Starting Keto</h1>
-    <p class="sub">Confused about what to eat, giving up after two weeks — until I found a proper, step-by-step plan.</p>
+    <div class="container nav">
+      <div class="logo">Keto Made Simple</div>
+      <a href="#recipes" class="nav-link">Free Recipes ↓</a>
+    </div>
   </header>
 
-  <div class="hero-art">
-    <div class="leaf l1"></div>
-    <div class="leaf l2"></div>
-    <div class="leaf l3"></div>
-    <div class="plate">
-      <div class="yolk"></div>
-      <div class="avocado"></div>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          🥑 SIMPLE KETO MEAL IDEAS
+        </div>
+
+        <h1>
+          Make Keto
+          <span class="highlight">A Little Simpler.</span>
+        </h1>
+
+        <p class="hero-text">
+          Looking for simple keto-friendly meal ideas?
+          Discover easy recipes and a structured approach to meal planning
+          so you spend less time wondering what to eat.
+        </p>
+
+        <a
+          class="cta"
+          href="https://www.claudiacaldwell.com/oto-uf61a?el=splittest-1214-bradflow-control#aff=kardugabarbad471c"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+        >
+          Get the Free Keto Recipes →
+        </a>
+
+        <div class="small-note">
+          Simple ideas • Beginner-friendly • Easy to follow
+        </div>
+
+      </div>
+
+
+      <div class="recipe-preview">
+
+        <div class="floating-card">
+          <span>✓</span> Easy meal ideas
+        </div>
+
+        <div class="recipe-card">
+
+          <div class="recipe-image">
+
+            <div class="recipe-label">
+              <small>KETO RECIPE IDEA</small>
+              <h3>Fresh & Simple Low-Carb Meals</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
+  </section>
+
+
+  <!-- TRUST BAR -->
+
+  <div class="trust">
+
+    <div class="container trust-row">
+
+      <div class="trust-item">
+        <strong>🥗 Meal Ideas</strong>
+        Simple recipes to explore
+      </div>
+
+      <div class="trust-item">
+        <strong>📅 Meal Planning</strong>
+        Less daily guesswork
+      </div>
+
+      <div class="trust-item">
+        <strong>🥑 Keto Friendly</strong>
+        Focus on low-carb ideas
+      </div>
+
+    </div>
+
   </div>
-  <p class="hero-caption">Real food, no guesswork — that's what changed things for me.</p>
 
-  <div class="story">
-    <p>When I first tried keto, the hardest part wasn't willpower — it was not knowing exactly what to eat or how much. I was piecing things together from random YouTube videos and Instagram posts, and it showed.</p>
-    <p>Then I tried a 30-Day Keto Meal Plan with day-by-day recipes, a complete food list, and even dessert options for when cravings hit. That structure was the difference between quitting in week two and actually sticking with it.</p>
-    <p class="signature">— if you're stuck in that same confused starting phase, this is the resource that worked for me</p>
+
+  <!-- PROBLEM -->
+
+  <section class="problem">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Not Sure What To Eat Every Day?</h2>
+      </div>
+
+      <div class="problem-content">
+
+        <p>
+          Starting a new eating routine can feel overwhelming when you have
+          to figure out every meal yourself. Having simple recipes and a
+          basic structure can make meal planning much easier.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <section id="recipes">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Simple Ideas. Less Guesswork.</h2>
+
+        <p>
+          Explore practical keto meal inspiration without making your routine complicated.
+        </p>
+
+      </div>
+
+
+      <div class="features">
+
+        <div class="feature">
+
+          <div class="icon">🍳</div>
+
+          <h3>Breakfast Ideas</h3>
+
+          <p>
+            Start your morning with simple keto-friendly meal inspiration.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">🥗</div>
+
+          <h3>Lunch Inspiration</h3>
+
+          <p>
+            Easy meal ideas when you want something simple and satisfying.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">🍗</div>
+
+          <h3>Dinner Ideas</h3>
+
+          <p>
+            Discover practical low-carb meal combinations for your evening.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">🥑</div>
+
+          <h3>Keto-Friendly Foods</h3>
+
+          <p>
+            Get ideas for foods commonly used in a low-carb eating approach.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">🛒</div>
+
+          <h3>Planning Made Easier</h3>
+
+          <p>
+            Spend less time searching for what to prepare next.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">📖</div>
+
+          <h3>Recipe Inspiration</h3>
+
+          <p>
+            Build a collection of simple ideas you can come back to.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT YOU GET -->
+
+  <section class="split">
+
+    <div class="container split-grid">
+
+      <div class="mockup">
+
+        <div class="mockup-top">
+          KETO MEAL GUIDE
+        </div>
+
+        <h2>
+          Simple meals.<br>
+          Simple planning.
+        </h2>
+
+        <div class="mockup-bottom">
+          Recipes • Meal Ideas • Food Inspiration
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="section-heading" style="text-align:left;margin:0 0 20px 0;">
+
+          <h2>
+            Start With A Simple Plan
+          </h2>
+
+          <p>
+            The goal isn't to make your meals complicated.
+            It's to make deciding what to eat a little easier.
+          </p>
+
+        </div>
+
+
+        <div class="check-list">
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            <div>
+              Easy-to-understand meal ideas
+            </div>
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            <div>
+              Keto-friendly recipe inspiration
+            </div>
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            <div>
+              Ideas for breakfast, lunch and dinner
+            </div>
+          </div>
+
+          <div class="check">
+            <div class="check-mark">✓</div>
+            <div>
+              A more organized approach to meal planning
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+
+        <a
+          class="cta"
+          href="https://www.claudiacaldwell.com/oto-uf61a?el=splittest-1214-bradflow-control#aff=kardugabarbad471c"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+        >
+          Explore the Keto Guide →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHO IT'S FOR -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Who Might Find This Useful?</h2>
+
+        <p>
+          A simple starting point for people who want more structure around their meals.
+        </p>
+
+      </div>
+
+
+      <div class="audience-box">
+
+        <div class="audience-item">
+          ✓ You're new to keto and need meal inspiration.
+        </div>
+
+        <div class="audience-item">
+          ✓ You don't want to search for recipes every day.
+        </div>
+
+        <div class="audience-item">
+          ✓ You prefer having a simple structure to follow.
+        </div>
+
+        <div class="audience-item">
+          ✓ You want to discover more keto-friendly meal ideas.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="problem">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Getting Started Is Simple</h2>
+
+      </div>
+
+
+      <div class="features">
+
+        <div class="feature">
+
+          <div class="icon">1️⃣</div>
+
+          <h3>Explore</h3>
+
+          <p>
+            Check out the available keto recipes and meal-planning resources.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">2️⃣</div>
+
+          <h3>Choose</h3>
+
+          <p>
+            See whether the meal ideas and plan fit your preferences.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">3️⃣</div>
+
+          <h3>Plan</h3>
+
+          <p>
+            Use the ideas to make your everyday meal planning more organized.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Frequently Asked Questions</h2>
+
+      </div>
+
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            Is this suitable for keto beginners?
+          </summary>
+
+          <p>
+            The resources are designed around simple keto-friendly recipes
+            and meal ideas, making them useful for people looking for an easier starting point.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Is this a guaranteed weight-loss program?
+          </summary>
+
+          <p>
+            No. Individual results vary. This page focuses on meal ideas and
+            planning rather than promising a specific weight-loss result.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Do I have to follow every recipe?
+          </summary>
+
+          <p>
+            No. You can review the available resources and decide which
+            recipes or meal ideas fit your preferences.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Where can I get the keto recipes?
+          </summary>
+
+          <p>
+            Click one of the buttons on this page to visit the offer and
+            see the current details.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="final">
+
+    <h2>
+      Ready To Make Meal Planning Easier?
+    </h2>
+
+    <p>
+      Explore the keto recipes and meal-planning resources and see whether
+      they're a good fit for you.
+    </p>
+
+    <a
+      class="cta"
+      href="https://www.claudiacaldwell.com/oto-uf61a?el=splittest-1214-bradflow-control#aff=kardugabarbad471c"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+    >
+      Get the Free Keto Recipes →
+    </a>
+
+  </section>
+
+
+  <!-- AFFILIATE DISCLOSURE -->
+
+  <div class="container">
+
+    <div class="disclosure">
+
+      <strong>Affiliate Disclosure:</strong>
+      This page contains affiliate links. If you purchase through a link
+      on this page, I may receive a commission at no additional cost to you.
+
+      <br><br>
+
+      <strong>Important:</strong>
+      This content is for general informational purposes only and is not
+      medical advice. If you have a medical condition or take medication,
+      consult a qualified healthcare professional before making significant
+      dietary changes.
+
+    </div>
+
   </div>
 
-  <div class="list-block">
-    <h2>What's Inside</h2>
-    <ul class="checklist">
-      <li>A full 30-Day Keto Meal Plan, laid out day by day</li>
-      <li>A complete Keto Food List — what to eat, what to avoid</li>
-      <li>77 Keto Dessert Recipes (for when cravings hit)</li>
-      <li>100 Keto Carb Recipes</li>
-    </ul>
-  </div>
 
-  <div class="cta-block">
-    <h3>See the Keto Kickstart Package</h3>
-    <p>Backed by a 60-day money-back guarantee</p>
-    <a class="cta-btn" href="https://www.claudiacaldwell.com/oto-uf61a?el=splittest-1214-bradflow-control#aff=kardugabarbad471c" target="_blank" rel="noopener">Check It Out →</a>
-  </div>
+  <!-- FOOTER -->
 
-  <p class="fine">
-    This page contains an affiliate link — if you purchase through it, I may earn a small commission at no extra cost to you.<br>
-    This is not medical advice. Talk to your doctor before starting any new diet.
-  </p>
+  <footer>
+    © 2026 Keto Made Simple • All Rights Reserved
+  </footer>
 
-</div>
 
 </body>
-</html>
+  </html>
